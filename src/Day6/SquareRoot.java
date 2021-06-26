@@ -37,6 +37,7 @@ public class SquareRoot {
         int[] testcase1 = new int[]{2,4,5,6,7};
         int[] testcase2 = new int[]{2,4,5,6,7,8,1,2};
         System.out.println(issequance(testcase1));
-        System.out.println(issequance(testcase2));
+        System.out.println(issequance(testcase2
+         ));
     }
 }

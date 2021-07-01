@@ -23,5 +23,10 @@ public class Basic {
        }
        return count;
    }
+   public static void printArray(int A[],int n){
+       for(int i = 0; i<n;i++){
+           System.out.print(A[i]+"\t");
+       }
+   }
 
 }

@@ -23,6 +23,7 @@ public class RotateArray {
             System.out.println();
         }
     }
+
     public static void rotate1(int arr[],int num){
         int n = arr.length;
         num = num%n;
@@ -36,10 +37,27 @@ public class RotateArray {
         }
         Basic.printArray(a,n);
     }
+    public static void reverse(int arr[],int start,int len){
+        int i = start;
+        int j = len-1;
+        for(;i<=j;i++,j--){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+    public static void rotate2(int arr[], int num){
+        reverse(arr,0, arr.length-num);
+        reverse(arr,arr.length-num, arr.length);
+        reverse(arr,0,arr.length);
+        Basic.printArray(arr,arr.length);
 
+    }
     public static void main(String[] args) {
         int [] testcase1 = new int[]{3,2,0,7,4};
         rotateArray(testcase1,4);
         rotate1(testcase1,5);
+        System.out.println();
+        rotate2(testcase1,3);
     }
 }

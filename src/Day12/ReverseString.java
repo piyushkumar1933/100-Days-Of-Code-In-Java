@@ -23,7 +23,7 @@ public class ReverseString {
     }
     public static String reverse2(String s){
         int i = s.length()-1;
-        int end = i;
+        int end = i+1;
         String rev = "";
         while (i>=0){
             if(s.charAt(i) == ' '){

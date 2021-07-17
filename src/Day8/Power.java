@@ -5,6 +5,8 @@ public class Power {
         if(n== 0){
             return 1;
         }
+        if(x ==0)
+            return 0;
         int temp =recursivePow(n/2,x);
         temp*=temp;
         if(n%2==0){

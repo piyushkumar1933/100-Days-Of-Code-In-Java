@@ -65,6 +65,7 @@ public class CheckPermutationString {
     public static void main(String[] args) {
         //permutation("ABC",0,2);
         //checkpermute1("ABCD","DBCA");
-        checkpermute2("ABCD","ABCD");
+       // checkpermute2("ABCD","ABCD");
+        checkpermute2("build","dubli");
     }
 }

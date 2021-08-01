@@ -11,14 +11,14 @@ public class StringToInteger {
     public static int strInt2(String s){
         if(s.length()<=0)
             return 0;
-        int smallNo = strInt(s.substring(0,s.length()-1));
+        int smallNo = strInt2(s.substring(0,s.length()-1));
         int temp = s.charAt(s.length()-1)-'0';
         return smallNo*10+temp;
     }
     public static int strInt3(String s){
         if(s.length()<=0)
             return 0;
-        int smallNo = strInt(s.substring(1));
+        int smallNo = strInt3(s.substring(1));
         if (s.charAt(0) == '-')
             return -1*smallNo;
         int temp = s.charAt(0)-'0';

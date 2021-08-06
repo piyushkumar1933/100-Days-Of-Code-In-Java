@@ -19,6 +19,19 @@ public class ReverseLinkedList {
         reverse2(head.next);
         System.out.println(head.data);
     }
+    public static LinkedList reverse3(LinkedList ls){
+        Node curr = ls.getHead();
+        Node prev = null;
+        Node fwd = null;
+        while (curr!=null){
+            fwd = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = fwd;
+        }
+        ls.setHead(prev);
+        return ls;
+    }
     public static void main(String[] args) {
         LinkedList<Integer> ls = new LinkedList<>();
         Scanner sc = new Scanner(System.in);
@@ -30,5 +43,6 @@ public class ReverseLinkedList {
         ls.display();
         revrse1(ls);
         reverse2(ls.getHead());
+        reverse3(ls).display();
     }
 }

@@ -2,13 +2,6 @@ package Day23;
 
 import java.util.Scanner;
 
-class Node<T>{
-    Node next;
-    T data;
-    Node(T data){
-        this.data = data;
-    }
-}
  public class LinkedList<T> {
     private Node<T> head;
     public Node<T> getHead(){

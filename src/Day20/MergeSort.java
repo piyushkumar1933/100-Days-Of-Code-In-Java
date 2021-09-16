@@ -39,7 +39,7 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int [] testcase1 = new int[]{20,-18,3,7,4};
+        int [] testcase1 = new int[]{20, -18,3,7,4};
         merge_sort(testcase1,0,testcase1.length-1);
         System.out.println();
         Basic.printArray(testcase1,testcase1.length);

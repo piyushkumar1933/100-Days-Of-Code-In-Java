@@ -26,23 +26,25 @@ public class QueueUsingArray {
             System.out.println("Queue Overflow");
             return;
         }
-        if(rear == -1 )
+        if(rear == -1 && front == -1)
             front = 0;
         rear = rear+1;
         arr[rear] = data;
         size +=1;
     }
     public int deQueue(){
-        if(front == -1){
+        if(front == -1 || front>rear){
             System.out.println("Queue Underflow");
             return -1;
         }
-        int deleted = arr[front++];
-        size--;
-        if (rear == front+1){
+        int deleted = arr[front];
+        if(front == rear){
             front = -1;
             rear = -1;
-            }
+        }
+        else
+            front +=1;
+        size--;
         return deleted;
 
     }
@@ -53,10 +55,29 @@ public class QueueUsingArray {
         }
         return arr[front];
     }
+    public void display(){
+        for(int i = front;i<=rear;i++){
+            System.out.printf("%d\t",arr[i]);
+        }
+    }
 
 }
 class QueueUse{
     public static void main(String[] args) {
+        QueueUsingArray queue = new QueueUsingArray();
+        System.out.println(queue.size());
+        queue.enQueue(10);
+        queue.deQueue();
+        queue.deQueue();
+        queue.enQueue(12);
+        queue.enQueue(13);
+        queue.enQueue(14);
+        queue.enQueue(15);
+        queue.enQueue(156);
+        System.out.println(queue.deQueue());
+        queue.enQueue(18);
+        queue.deQueue();
+        queue.display();
 
     }
 }
